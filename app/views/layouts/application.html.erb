@@ -9,8 +9,25 @@
   </head>
 
   <body>
+    <header class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <nav class="text-canter">
+          <h1><% image_tag "tigerLogo.png", :width => "350px", :height => "auto", :class => "style_image" %></h1>
+        <ul class="nav navbar-nav navbar-left">
+          <li><%= link_to "Home", :controller => 'home', :action => 'index'%></li>
+          <li><%= link_to "Directory", :controller => 'directory', :action => 'index'%></li>
+          <li><%= link_to "Message Board", :controller => 'messageBoard', :action => 'index'%></li>
+        </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="top-line"></div>
+        <br /><br /><br />
+    </div>
     <%= yield %>
-    <br>
-    <p> "hello world!"</p>
+
+    <div class="footerInfo">
+      <p>DePauw University First-Year Mentor Program Resource Center</p>
+    </div>
   </body>
 </html>
