@@ -11,22 +11,21 @@
   <body>
     <header class="navbar navbar-inverse" role="navigation">
       <div class="container">
-        <nav class="text-center">
-          <div class="style_image">
-            <h1><%= image_tag "DePauw_Tigers_logo.png", :width => "75px", :height => "auto" %> Mentor Connection </h1>
-          </div>
-        <ul class="nav navbar-nav navbar-left">
+        <div class="style_image">
+          <h1><%= image_tag "DePauw_Tigers_logo.png", :width => "75px", :height => "auto" %> Mentor Connection </h1>
+        </div>
+        <ul class="nav nav-justified">
           <li><%= link_to "Home", '#'%></li>
           <li><%= link_to "Directory", '#'%></li>
           <li><%= link_to "Message Board", '#'%></li>
         </ul>
-        </nav>
       </div>
     </header>
     <%= yield %>
 
       <div class="footer">
         <p>DePauw University First-Year Mentor Program Resource Center</p>
+        <p>Office of Student Academic Life | 408 S. Locust St. | Greencastle, IN 46135</p>
       </div>
     
   </body>
