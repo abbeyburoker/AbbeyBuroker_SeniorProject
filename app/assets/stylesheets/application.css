@@ -13,49 +13,63 @@
  *= require_tree .
  *= require_self
  */
-.container1{
-	background-color: #000000;
+
+/* Header */
+
+.nav.navbar-nav.navbar-left li a{
+	color: #fed85e;
+	margin-top: 1em;
+	font-size: 18px;
+	font-family: "Avenir";
+	text-align: center;
+
+}
+
+.nav.navbar-nav.navbar-left li a:hover{
+	color: #727171;
 }
 
 .style_image{
 	margin-left: 0%;
 }
 
-.nav.navbar-nav.navbar-left li a{
-	color: #FFCF01;
-	margin-top: 1em;
-	font-size: 16px;
-	font-family: "Avenir";
-}
-
-.nav.navbar-nav.navbar-left li a:hover{
-	color: #FFFFFF;
-}
-
-.top-line{
-	border-bottom: solid;
-	border-bottom-width: 1px;
-}
-
 .navbar{
-	background-color: #000000;
-	color: #FFCF01;
+	background-color: #252525;
+	color: #fed85e;
+	text-align: center;
 }
 
 .text-center{
 	padding-top: .5em;
-	background-color: #000000;
+	background-color: #252525;
 	padding-bottom: 1.5em;
 	margin-left: -20px !important;
 }
 
+.container{
+	text-align: center;
+}
+
 .footer{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 2rem;
+	font-size: 16px;
+	list-style: none;
+	text-align: center;
+	color: #fed85e;
+	background-color: #252525;
+}
+
+/*.footer{
 	padding: 2em;
 	font-size: 16px;
 	background-color: #000000;
 }
 
-.footInfo{
+.footer{
 	float: left;
 	font-size: 12px;
 	font-family: "Avenir";
@@ -68,4 +82,4 @@
 	border-left-width: 1px;
 	padding-right: 5em;
 }
-
+*/

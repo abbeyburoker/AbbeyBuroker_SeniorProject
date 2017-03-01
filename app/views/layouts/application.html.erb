@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MentorConnection</title>
+    <title>Mentor Connection</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,23 +11,23 @@
   <body>
     <header class="navbar navbar-inverse" role="navigation">
       <div class="container">
-        <nav class="text-canter">
-          <h1><% image_tag "tigerLogo.png", :width => "350px", :height => "auto", :class => "style_image" %></h1>
+        <nav class="text-center">
+          <div class="style_image">
+            <h1><%= image_tag "DePauw_Tigers_logo.png", :width => "75px", :height => "auto" %> Mentor Connection </h1>
+          </div>
         <ul class="nav navbar-nav navbar-left">
-          <li><%= link_to "Home", :controller => 'home', :action => 'index'%></li>
-          <li><%= link_to "Directory", :controller => 'directory', :action => 'index'%></li>
-          <li><%= link_to "Message Board", :controller => 'messageBoard', :action => 'index'%></li>
+          <li><%= link_to "Home", '#'%></li>
+          <li><%= link_to "Directory", '#'%></li>
+          <li><%= link_to "Message Board", '#'%></li>
         </ul>
         </nav>
       </div>
     </header>
-    <div class="top-line"></div>
-        <br /><br /><br />
-    </div>
     <%= yield %>
 
-    <div class="footerInfo">
-      <p>DePauw University First-Year Mentor Program Resource Center</p>
-    </div>
+      <div class="footer">
+        <p>DePauw University First-Year Mentor Program Resource Center</p>
+      </div>
+    
   </body>
 </html>
