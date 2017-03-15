@@ -10,7 +10,7 @@ end
 gem 'rails', '~> 5.0.1'
 #allows has_secure_password to use hash function bcrypt to has passwords not in plaintext
 gem 'bcrypt', '3.1.11'
-
+#this allows has_secure_password to use the hash function bycrypt
 gem 'bootstrap-sass', '3.3.6'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'

@@ -1,12 +1,19 @@
 class User < ApplicationRecord
-	before_save{email.downcase!}
-	#forces email to be converted into lowercase before it is saved to the database, enforce uniqueness
+	has_many :microposts
+
+	before_save {email.downcase!}
+	#forces email to be converted to lowercase before saved to database
+
 	validates :name, presence: true, length: {maximum: 50}
-	#makes sure name is present and sets a maximum length of 50 characters
+	#makes sure the name is present and sets a max number of char
+
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i 
-	validates :email, presence: true, length: {maximum: 250}, format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
-	#makes sure email is present, sets maximum length, and checks that format is correct and endures uniqueness; not case sensitive
+	
+	validates :email, presence: true, length: {maximum: 250}, format:{with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
+	#makes sure email is present, sets max length, ensure apropriate format, ensures uniqueness
+
 	has_secure_password
-	#adds the method to User model
+	#adds the method to the user model
+
 	validates :password, presence: true, length: {minimum: 6}	
 end
