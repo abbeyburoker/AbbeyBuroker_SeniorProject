@@ -1,9 +1,18 @@
 Rails.application.routes.draw do
   
+  get 'sessions/new'
 
-  resources :microposts
-  
   resources :users
+  
+  get '/signup', to: 'users#new'
+
+  get '/login', to: 'sessions#new'
+
+  post '/login', to: 'sessions#create'
+
+  post '/logout', to: 'sessions#destroy'
+
+  get 'users/new'
 
   get 'home/index'
 
