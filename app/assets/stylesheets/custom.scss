@@ -1,13 +1,2 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
-/* forms */
-input, textarea, select, .uneditable-input {
-	border: 1px solid black;
-	width: 70%;
-	margin-bottom: 15px;
-	/*@include box_sizing;*/
-}
-input{
-	height: auto;
-}

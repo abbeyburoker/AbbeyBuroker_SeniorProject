@@ -3,7 +3,6 @@ class UsersController < ApplicationController
   	@user = User.new
   end
 
-
   def show
   	@user = User.find(params[:id])
   	#when this is called, the id of the user is passed

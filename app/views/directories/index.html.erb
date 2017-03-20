@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewpoint" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootsrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body class="container2">
+    <p id="notice"><%= notice %></p>
+    <div class="page-header">
+      <!--<%= link_to new_directory_path, class: 'btn btn-primary' do %>
+      <span class="glyphicon glyphicon-plus"></span>
+      New Directory
+      <% end %>
+    -->
+    <h1>Directory</h1>
+    <div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Graduation year</th>
+          <th>Mentor experience</th>
+          <th>Depauw involvement</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @directories.each do |directory| %>
+          <tr>
+            <td><%= directory.name %></td>
+            <td><%= directory.email %></td>
+            <td><%= directory.graduation_year %></td>
+            <td><%= directory.mentor_experience %></td>
+            <td><%= directory.depauw_involvement %></td>
+            <td><%= link_to 'Show', directory %></td>
+            <td><%= link_to 'Edit', edit_directory_path(directory) %></td>
+            <td><%= link_to 'Destroy', directory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+    <br>
+
+    </body>
+</html>
