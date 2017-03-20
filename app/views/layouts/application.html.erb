@@ -23,7 +23,7 @@
           <ul class="nav navbar-nav nav-right">
             <li><%= link_to "Home", :controller => 'home', :action => 'index'%></li>
             <li><%= link_to "Directory", :controller => 'directories', :action => 'index'%></li>
-            <li><%= link_to "Message Board", '#'%></li>
+            <li><%= link_to "Message Board", :controller => 'message_boards', :action => 'index'%></li>
             <% if logged_in? %>
             <li><%= link_to "Users", :constoller => 'users', :action => 'show' %></li>
              <li class="dropdown">

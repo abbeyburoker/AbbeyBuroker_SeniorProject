@@ -8,13 +8,13 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootsrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body class="container2">
-    <p id="notice"><%= notice %></p>
+    <!--<p id="notice"><%= notice %></p>
     <div class="page-header">
-      <!--<%= link_to new_directory_path, class: 'btn btn-primary' do %>
+      <%= link_to new_directory_path, class: 'btn btn-primary' do %>
       <span class="glyphicon glyphicon-plus"></span>
       New Directory
-      <% end %>
-    -->
+      <% end %>-->
+    
     <h1>Directory</h1>
     <div class="table-responsive">
     <table class="table table-striped table-bordered table-hover">
@@ -36,9 +36,9 @@
             <td><%= directory.graduation_year %></td>
             <td><%= directory.mentor_experience %></td>
             <td><%= directory.depauw_involvement %></td>
-            <td><%= link_to 'Show', directory %></td>
+            <!--<td><%= link_to 'Show', directory %></td>
             <td><%= link_to 'Edit', edit_directory_path(directory) %></td>
-            <td><%= link_to 'Destroy', directory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Destroy', directory, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
           </tr>
         <% end %>
       </tbody>

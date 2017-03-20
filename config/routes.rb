@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :message_boards
   resources :directories
   get 'sessions/new'
 
