@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  
-  get 'logout/index'
 
   resources :message_boards
+
   resources :directories
+
   get 'sessions/new'
 
   resources :users
@@ -20,7 +20,9 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
-  root 'home#index'
+  get 'home/new'
+
+  root 'home#new'
 
   get 'directories/index'
 

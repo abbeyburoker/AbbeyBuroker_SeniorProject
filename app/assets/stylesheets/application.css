@@ -16,6 +16,10 @@
 
 /* Header */
 
+.container{
+	text-align: center;
+}
+
 .nav.nav-justified li a{
 	color: #fed85e;
 	margin-top: 1em;
@@ -45,10 +49,6 @@
 	background-color: #252525;
 	color: #fed85e;
 	
-}
-
-.container{
-	text-align: center;
 }
 
 /* Footer */

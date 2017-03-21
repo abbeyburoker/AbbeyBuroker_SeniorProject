@@ -18,22 +18,20 @@
       <div class="container">
         <nav>
           <div class="style_image">
-            <h1><%= image_tag "DePauw_Tigers_logo.png", :width => "75px", :height => "auto" %> Mentor Connection </h1>
+            <h1><%= image_tag "DePauw_Tigers_logo.png", :width => "75px", :height => "auto" %> Mentor Connection</h1>
           </div>
           <ul class="nav navbar-nav nav-right">
             <% if logged_in? %>
             <li><%= link_to "Home", :controller => 'home', :action => 'index'%></li>
             <li><%= link_to "Directory", :controller => 'directories', :action => 'index'%></li>
             <li><%= link_to "Message Board", :controller => 'message_boards', :action => 'index'%></li>
-            
-            
              <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   Account <b class="caret"></b>
                 </a>
               <ul class="dropdown-menu">
                 <li><%= link_to "Profile", current_user %></li>
-                <li><%= link_to "Settings", '#' %></li>
+                <!--<li><%= link_to "Settings", '#' %></li>-->
                 <li class="divider"></li>
                 <li>
                   <%= link_to "Log out", logout_path, method: "delete" %>
@@ -48,9 +46,9 @@
         </ul>
       </div>
     </header>
-    <div class="container">
+    <!--<div class="container">-->
         <br /><br /><br /><br />
-    </div>
+    <!--</div>-->
     <%= yield %>
 
       <div class="footer">
