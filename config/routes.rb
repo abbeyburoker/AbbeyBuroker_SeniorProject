@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'logout/index'
+
   resources :message_boards
   resources :directories
   get 'sessions/new'
@@ -12,7 +14,7 @@ Rails.application.routes.draw do
 
   post '/login', to: 'sessions#create'
 
-  post '/logout', to: 'sessions#destroy'
+  delete '/logout', to: 'sessions#destroy'
 
   get 'users/show'
 
@@ -20,7 +22,9 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  get 'directories/index' 
+  get 'directories/index'
+
+  get 'logout/index' 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
