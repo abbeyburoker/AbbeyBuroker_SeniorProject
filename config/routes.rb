@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   resources :message_boards
 
+  resources :messages
+
   resources :directories
 
   get 'sessions/new'
@@ -25,6 +27,10 @@ Rails.application.routes.draw do
   root 'home#new'
 
   get 'directories/index'
+
+  get 'message_boards/index'
+
+  get 'message_boards/new'
 
   get 'logout/index' 
 
