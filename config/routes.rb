@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
+  resources :questions
   resources :message_boards
 
-  resources :messages
+  resources :messages do
+    resources :comments  
+  end
+
 
   resources :directories
 
@@ -27,6 +31,8 @@ Rails.application.routes.draw do
   root 'home#new'
 
   get 'directories/index'
+
+  get 'questions/index'
 
   get 'message_boards/index'
 

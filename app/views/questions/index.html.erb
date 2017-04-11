@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewpoint" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootsrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body class="container2">
+<br>
+<!--<p id="notice"><%= notice %></p>-->
+
+<h1>Questions</h1>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Solution</th>
+      <th>Resource</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.question %></td>
+        <td><%= question.solution %></td>
+        <td><%= question.resource %></td>
+        <!--<td><%= link_to 'Show', question %></td>
+        <td><%= link_to 'Edit', edit_question_path(question) %></td>
+        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+
+</body>
+</html>
+
+<!--<%= link_to 'New Question', new_question_path %>-->
+<br>

@@ -1,5 +1,8 @@
 class User < ApplicationRecord
 
+	has_many :messages
+	has_many :comments
+
 	before_save {email.downcase!}
 	#forces the email to be converted into lowercase before it is saved to the database to enforce uniqueness
 
