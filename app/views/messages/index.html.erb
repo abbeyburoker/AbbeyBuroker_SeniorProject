@@ -1,5 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewpoint" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootsrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body class="container2">
 <div class = "message_display">
-<br><br><br>
+<br>
 <% @messages.each do |message| %> 
 	<h2><%= message.title %></h2>
 	<%= link_to "View Message", message_path(message, class: "btn btn-default") %>
@@ -7,5 +17,7 @@
 <br><br><br>
 <%= link_to "New Message", new_message_path %> 
 
-<br><br><br><br><br><br><br><br>
+<br><br>
 </div>
+</body>
+</html>

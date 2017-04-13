@@ -5,6 +5,11 @@ class DirectoriesController < ApplicationController
   # GET /directories.json
   def index
     @directories = Directory.all
+    if params[:search]
+      @directories = Directory.search(params[:search]).order("created_at DESC")
+    else
+      @directories = Directory.all.order("created_at DESC")
+    end
   end
 
   # GET /directories/1

@@ -1,22 +1,32 @@
-<div class = "message_display">
-<br><br><br>
-<h3><%= @message.title %></h3>
-<p > Posted by <%= @message.user.email %> <%= time_ago_in_words(@message.created_at) %> ago </p>
-<div class = "message_text">
-<p><%= @message.description %></p>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewpoint" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootsrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body class="container2">
+	<div class = "message_display">
+	<br><br><br>
+	<h3><%= @message.title %></h3>
+	<p > Posted by <%= @message.user.email %> <%= time_ago_in_words(@message.created_at) %> ago </p>
+	<div class = "message_text">
+	<p><%= @message.description %></p>
+	</div>
 
-<h4>Comments:</h4>
-<%= render @message.comments %>
-</div>
+	<h4>Comments:</h4>
+	<%= render @message.comments %>
+	</div>
 
-<h4>Reply to Message:</h4>
-<%= render 'comments/form' %>
+	<h4>Reply to Message:</h4>
+	<%= render 'comments/form' %>
 
-<%= link_to "Back", messages_path %>
-	<% if @message.user_id == current_user.id %>
-		<%= link_to "Edit", edit_message_path(@message) %>
-		<%= link_to "Delete", message_path(@message), method: :delete, data: { confirm: "Are you sure?" } %>
-	<% end %>
-
-<br><br><br><br><br><br><br><br>
+	<%= link_to "Back", messages_path %>
+		<% if @message.user_id == current_user.id %>
+			<%= link_to "Edit", edit_message_path(@message) %>
+			<%= link_to "Delete", message_path(@message), method: :delete, data: { confirm: "Are you sure?" } %>
+		<% end %>
+	</body>
+</html>
