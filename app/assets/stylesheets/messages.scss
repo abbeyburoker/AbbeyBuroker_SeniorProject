@@ -1,7 +1,22 @@
 // Place all the styles related to the Messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.mbTitle {
+	text-align: center;
+}
+
 .message_display {
 	text-align: left;
 }
 
+.msgButton {
+	text-decoration: none;
+}
+
+.timestamp {
+	font-style: italic;
+}
+
+.text {
+	font-size: 120%;
+}
