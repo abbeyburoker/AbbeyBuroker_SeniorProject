@@ -16,13 +16,13 @@
       <% end %>-->
     <br>
     <h1>Directory</h1>
-    <%= form_tag(directories_index_path, :method => "get", id: "search-form") do %>
+    <!--<%= form_tag(directories_index_path, :method => "get", id: "search-form") do %>
       <%= text_field_tag :search, params[:search], placeholder: "Search Directory" %>
       <%= submit_tag "Search", :name => nil %>
     <% if @directories.blank? %>
       <h4> There are no directory entries that match the search </h4>
       <% end %>
-    <% end %>
+    <% end %>-->
     <br>
     <div class="table-responsive">
     <table class="table table-striped table-bordered"> <!--table-hover-->
