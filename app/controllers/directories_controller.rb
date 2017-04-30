@@ -6,9 +6,9 @@ class DirectoriesController < ApplicationController
   def index
     @directories = Directory.all
     if params[:search]
-      @directories = Directory.search(params[:search]).order("created_at DESC")
+      @directories = Directory.search(params[:search])
     else
-      @directories = Directory.all.order("created_at DESC")
+      @directories = Directory.all
     end
   end
 

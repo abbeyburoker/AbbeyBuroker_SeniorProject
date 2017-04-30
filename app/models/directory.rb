@@ -1,6 +1,10 @@
 class Directory < ApplicationRecord
 
 	def self.search(search)
-		where("name LIKE ?", "%#{search}")
+		if search
+			where("name LIKE ?", "%#{search}")
+		else 
+			scoped
+		end
 	end
 end
