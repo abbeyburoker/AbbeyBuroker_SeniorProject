@@ -23,8 +23,10 @@
           <ul class="nav navbar-nav nav-right">
             <% if logged_in? %>
             <li><%= link_to "Home", :controller => 'home', :action => 'index'%></li>
+            <li><%= link_to "Calendar", :controller => 'calendar', :action => 'index' %></li>
             <li><%= link_to "Mentor Staff", :controller => 'directories', :action => 'index'%></li>
             <li><%= link_to "FAQ", :controller => 'questions', :action => 'index' %></li>
+            <li><%= link_to "Campus Resources", :controller => 'resources', :action => 'index' %></li>
             <li><%= link_to "New Message", new_message_path %></li>
             <li><%= link_to "Message Board", :controller => 'messages', :action => 'index'%></li>
              <!--<li class="dropdown">

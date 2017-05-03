@@ -12,6 +12,13 @@ class DirectoriesController < ApplicationController
     end
   end
 
+  def search
+  end
+
+  def display
+    @directories = Directory.search(params[:search])
+  end
+
   # GET /directories/1
   # GET /directories/1.json
   def show

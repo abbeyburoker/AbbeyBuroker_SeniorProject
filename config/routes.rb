@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :resources
+  get 'calendar/index'
+
+  get 'calendar/new'
+
   resources :questions
   resources :message_boards
 
@@ -30,7 +35,13 @@ Rails.application.routes.draw do
 
   root 'home#new'
 
+  get 'calendar/index'
+
   get 'directories/index'
+
+  get 'directories/search'
+
+  post 'directories/display'
 
   get 'questions/index'
 
