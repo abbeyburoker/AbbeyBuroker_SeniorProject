@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewpoint" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootsrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+  	<br><br><br><br><br><br><br>
+  	<h1>Campus Resources</h1>
+  	<%= form_tag(controller: "resources", action: "display", :method => "post", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Resources" %>
+    <%= submit_tag "Search", class: "btn btn-primary"  %>
+    <% end %>
+    <br>
+    <% if search = nil %>
+  		<p> There are no corresponding mentors that match your search. </p>
+  		<%= link_to 'Back', directories_path %>
+  	<% else %>
+  		<div class="table-responsive">
+		  <table class="table table-striped table-bordered"> 
+		  <thead>
+		    <tr>
+		      <th>Name</th>
+		      <th>Email</th>
+		      <th>Phone</th>
+		      <th>Address</th>
+		    </tr>
+		  </thead>
+		  <% @resources.each do |resource| %>
+		   <tbody>
+		      <tr>
+		        <td><%= resource.name %></td>
+		        <td><%= resource.email %></td>
+		        <td><%= resource.phone %></td>
+		        <td><%= resource.address %></td>
+		      </tr>
+		    <% end %>
+		  </tbody>
+		</table>
+		<%= link_to 'Back', resources_path %>
+		</div>
+		<% end %>
+  	 <br> <br> <br>
+  </body>
+ </html>

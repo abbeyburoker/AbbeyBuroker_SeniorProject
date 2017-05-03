@@ -8,12 +8,11 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootsrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
-  	 <br><br><br><br><br><br>
-  	<br>
+  	 <br><br><br><br><br><br><br>
     <h1>Meet the Mentors!</h1>
     <%= form_tag(controller: "directories", action: "display", :method => "post", id: "search-form") do %>
     <%= text_field_tag :search, params[:search], placeholder: "Search Mentor Staff" %>
-    <%= submit_tag "Search" %>
+    <%= submit_tag "Search", class: "btn btn-primary"  %>
     <% end %>
     <br>
   	<% if search = nil %>

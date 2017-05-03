@@ -43,6 +43,10 @@ Rails.application.routes.draw do
 
   post 'directories/display'
 
+  get 'resources/index'
+
+  post 'resources/display'
+
   get 'questions/index'
 
   get 'message_boards/index'
